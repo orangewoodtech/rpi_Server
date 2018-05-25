@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Upload</title>
+</head>
+<body>
+<img src="{{url_for('static', filename='rasp_icon.jpg')}}" height = 200 width = 200>
+<form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+
+    <h1><strong>Upload Gerber Files here : </strong></h1><br><br>
+    <input id="file-picker" type="file" name="file" ><br><br>
+    <input type="submit" value="Upload!" id="upload-button">
+</form>
+</body>
+</html>
+
+<!--
+References :
+
+How HTML Forms work : https://www.w3schools.com/html/html_forms.asp
+
+To limit the type of files that we wish to upload , we can specify those inside the HTML form ( Maybe it is needed when the page is restricted to get only gerber file )
+Look here : https://stackoverflow.com/questions/4328947/limit-file-format-when-using-input-type-file
+
+
+
+How to resolve the static image display error while hosting webpage from flask framework :
+https://stackoverflow.com/questions/42731376/flask-web-page-cannot-find-image-file?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+
+
+-->
